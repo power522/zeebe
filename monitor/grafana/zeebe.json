@@ -83,7 +83,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1603456725508,
+  "iteration": 1603780843903,
   "links": [],
   "panels": [
     {
@@ -4124,7 +4124,8 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(rate(container_fs_reads_bytes_total{namespace=~\"$namespace\", pod=~\"$namespace.*\"}[1m])) by (pod)",
+              "expr": "sum(rate(container_fs_reads_bytes_total{namespace=~\"$namespace\", pod=~\"$pod\"}[1m])) by (pod)",
+              "interval": "",
               "legendFormat": "{{pod}}",
               "refId": "A"
             }
@@ -4212,7 +4213,8 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(rate(container_fs_writes_bytes_total{namespace=~\"$namespace\", pod=~\"$namespace.*\"}[1m])) by (pod)",
+              "expr": "sum(rate(container_fs_writes_bytes_total{namespace=~\"$namespace\", pod=~\"$pod\"}[1m])) by (pod)",
+              "interval": "",
               "legendFormat": "{{pod}}",
               "refId": "A"
             }
@@ -4300,7 +4302,8 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(rate(container_network_transmit_bytes_total{namespace=~\"$namespace\", pod=~\"$namespace.*\"}[1m])) by (pod)",
+              "expr": "sum(rate(container_network_transmit_bytes_total{namespace=~\"$namespace\", pod=~\"$pod\"}[1m])) by (pod)",
+              "interval": "",
               "legendFormat": "{{pod}}",
               "refId": "A"
             }
@@ -4388,7 +4391,8 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(rate(container_network_receive_bytes_total{namespace=~\"$namespace\", pod=~\"$namespace.*\"}[1m])) by (pod)",
+              "expr": "sum(rate(container_network_receive_bytes_total{namespace=~\"$namespace\", pod=~\"$pod\"}[1m])) by (pod)",
+              "interval": "",
               "legendFormat": "{{pod}}",
               "refId": "A"
             }
@@ -9265,5 +9269,5 @@
   "variables": {
     "list": []
   },
-  "version": 18
+  "version": 19
 }
